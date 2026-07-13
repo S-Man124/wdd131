@@ -1,0 +1,146 @@
+/* ===========================
+   Global Styles
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #002b5c;
+    --secondary-color: #d4af37;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --text-color: #333333;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    text-align: center;
+    font-family: "Merriweather", serif;
+    margin-bottom: 1rem;
+}
+
+/* ===========================
+   Hamburger Button
+=========================== */
+
+#menu {
+    display: block;
+    margin: 0 auto 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    display: none;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+/* Show navigation when open */
+nav.open a {
+    display: block;
+}
+
+/* ===========================
+   Main
+=========================== */
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-family: "Merriweather", serif;
+}
+
+/* ===========================
+   Temple Gallery
+=========================== */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+}
+
+figure {
+    background: var(--card-background);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+figure img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: .8rem;
+    font-weight: bold;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p {
+    margin: .5rem 0;
+}
