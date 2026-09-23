@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>South Africa | WDD 131 | Sibusiso Manyoni</title>
+
+    <meta
+        name="description"
+        content="WDD 131 country page featuring South Africa, including country information and weather."
+    >
+
+    <meta
+        name="author"
+        content="Sibusiso Manyoni"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+
+    <!-- Page JavaScript -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>South Africa</h1>
+    </header>
+
+    <main>
+
+        <!-- Hero Image -->
+        <section class="hero">
+            <img
+                src="images/south-africa.webp"
+                srcset="
+                    images/south-africa-small.webp 315w,
+                    images/south-africa.webp 630w
+                "
+                sizes="(max-width: 767px) 100vw, 1200px"
+                alt="South African landscape"
+                width="630"
+                height="630"
+            >
+        </section>
+
+        <!-- Country Data -->
+        <section class="info-card data">
+            <h2>Data</h2>
+
+            <dl>
+                <div>
+                    <dt>Area:</dt>
+                    <dd>1,221,037 km²</dd>
+                </div>
+
+                <div>
+                    <dt>Capital:</dt>
+                    <dd>Pretoria</dd>
+                </div>
+
+                <div>
+                    <dt>Languages:</dt>
+                    <dd>12 official languages</dd>
+                </div>
+
+                <div>
+                    <dt>Currency:</dt>
+                    <dd>South African Rand (ZAR)</dd>
+                </div>
+
+                <div>
+                    <dt>Time Zone:</dt>
+                    <dd>SAST (UTC+2)</dd>
+                </div>
+
+                <div>
+                    <dt>Calling Code:</dt>
+                    <dd>+27</dd>
+                </div>
+
+                <div>
+                    <dt>Internet TLD:</dt>
+                    <dd>.za</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- Weather -->
+        <section class="info-card weather">
+            <h2>Weather</h2>
+
+            <img
+                class="weather-icon"
+                src="images/weather-partly-cloudy.svg"
+                alt="Partly cloudy weather"
+                width="60"
+                height="60"
+            >
+
+            <p>Conditions: Partly Cloudy</p>
+            <p>Temperature: <span id="temperature">5</span> °C</p>
+            <p>Wind: <span id="wind-speed">10</span> km/h</p>
+            <p>Wind Chill: <span id="windchill"></span></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Sibusiso Manyoni | South Africa
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

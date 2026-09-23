@@ -1,0 +1,184 @@
+/* ===========================
+   Global Styles
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #007749;
+    --secondary-color: #ffb81c;
+    --accent-color: #de3831;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --text-color: #222222;
+    --white-color: #ffffff;
+    --shadow-color: #00000033;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: "Merriweather", serif;
+}
+
+/* ===========================
+   Main Content
+=========================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===========================
+   Hero Image
+=========================== */
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===========================
+   Information Cards
+=========================== */
+
+.info-card {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.info-card h2 {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 0.75rem;
+    margin: -1.5rem -1.5rem 1rem;
+}
+
+.data dl {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.data dl div {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.data dt {
+    font-weight: 700;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.data dd {
+    padding-left: 0.5rem;
+}
+
+/* ===========================
+   Weather
+=========================== */
+
+.weather-icon {
+    display: block;
+    width: 60px;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
+.weather p {
+    margin-bottom: 0.4rem;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* ===========================
+   Large Screen Layout
+=========================== */
+
+@media screen and (min-width: 768px) {
+
+    header {
+        padding: 1.5rem;
+    }
+
+    main {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    .info-card {
+        position: absolute;
+        width: 300px;
+        margin: 0;
+    }
+
+    .data {
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .weather {
+        right: 2rem;
+        bottom: 2rem;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+        margin-left: 0.5rem;
+    }
+}
