@@ -1,0 +1,50 @@
+
+/* ==========================================
+   Large Screen Styles
+========================================== */
+
+@media screen and (min-width: 768px) {
+    /* Hide the hamburger button on larger screens. */
+    #menu {
+        display: none;
+    }
+
+    /* Align the title and navigation horizontally. */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    #site-title {
+        margin: 0;
+        text-align: left;
+    }
+
+    /* Display navigation links in a row. */
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+    }
+
+    /* Add a subtle hover effect to the new cards. */
+    .temple-card {
+        transition: transform 0.3s ease,
+                    box-shadow 0.3s ease;
+    }
+
+    .temple-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px var(--shadow-color);
+    }
+}

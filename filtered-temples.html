@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 131 – Filtered Temple Album – Sibusiso Manyoni</title>
+
+    <meta
+    name="description"
+    content="Explore temples around the world using interactive filters for dedication date and building area."
+    >
+
+    <meta
+        name="author"
+        content="Sibusiso Manyoni">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Mobile First CSS -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+
+    <!-- Desktop CSS -->
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <span id="site-title">Temple Album</span>
+
+    <button id="menu" aria-label="Open Navigation Menu">
+        ☰
+    </button>
+
+
+    <nav>
+        <a href="#" data-filter="home">Home</a>
+        <a href="#" data-filter="old">Old</a>
+        <a href="#" data-filter="new">New</a>
+        <a href="#" data-filter="large">Large</a>
+        <a href="#" data-filter="small">Small</a>
+    </nav>
+
+</header>
+
+
+<main>
+    <h1>Temple Gallery</h1>
+
+    <div id="temples-container" class="temple-grid">
+        <!-- JavaScript will generate the temple cards here. -->
+    </div>
+</main>
+
+<footer>
+
+    <p>
+        &copy;
+        <span id="currentyear"></span>
+        Sibusiso Manyoni | South Africa
+    </p>
+
+    <p id="lastModified"></p>
+
+</footer>
+
+</body>
+</html>
