@@ -1,0 +1,288 @@
+/* ===========================
+   Global Styles
+=========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #002b5c;
+    --secondary-color: #d4af37;
+    --background-color: #f4f6f8;
+    --form-background: #ffffff;
+    --text-color: #222222;
+    --border-color: #b8bec5;
+    --white-color: #ffffff;
+    --focus-color: #005fcc;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.25rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* ===========================
+   Main
+=========================== */
+
+main {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+form {
+    background-color: var(--form-background);
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group > label,
+legend {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.optional {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font: inherit;
+    background-color: var(--white-color);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+/* ===========================
+   Fieldsets
+=========================== */
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+/* ===========================
+   Rating
+=========================== */
+
+.rating {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.25rem;
+}
+
+.rating label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.rating label > span:first-child {
+    min-height: 28px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+.rating input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 0.4rem 0;
+    cursor: pointer;
+}
+
+.rating-number {
+    font-size: 0.85rem;
+}
+
+/* ===========================
+   Checkboxes
+=========================== */
+
+.checkbox-group {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+/* ===========================
+   Submit Button
+=========================== */
+
+.submit-button {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.8rem 1rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.submit-button:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+/* ===========================
+   Larger Screens
+=========================== */
+
+@media screen and (min-width: 600px) {
+    main {
+        padding: 2rem 1rem;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ===========================
+   Confirmation Page
+=========================== */
+
+.confirmation {
+    background-color: var(--form-background);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+    text-align: center;
+}
+
+.confirmation h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.confirmation p {
+    margin: 1rem 0;
+}
+
+#reviewCount {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.return-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.25rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.return-link:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.return-link:focus {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+}
